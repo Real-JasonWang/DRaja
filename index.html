@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive periodic table with Fluent Design aesthetics">
+  <title>Interactive Periodic Table</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="title">言灵周期表</h1>
+        <div class="about">关于 About</div>
+      </header>
+      
+      <div class="container">
+        <div class="periodic-table">
+          <!-- Generate here -->
+        </div>
+      </div>
+
+<!-- Element -->
+<div class="modal" id="elementModal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h1 id="elementName"></h1>
+      <p id="elementNumber"></p>
+      <p id="elementLineage"></p>
+      <p id="elementDanger"></p>
+      <p id="elementDiscoverer"></p>
+      <p id="elementDescription"></p>
+      <p id="elementQuote"></p>
+      <p id="elementUser"></p>
+    </div>
+  </div>
+  
+  <!-- About -->
+  <div class="modal" id="aboutModal">
+    <div class="modal-content">
+      <span class="close-button about-close-button">&times;</span>
+      <h1>关于这个项目</h1>
+      <p>-------------------------</p>
+      <p>Design by Weifeng Wang</p>
+      <p>-------------------------</p>
+      <p>这是一个交互式元素周期表，设计采用Fluent Design风格。</p>
+      <p>点击任意元素可查看详细信息。</p>
+    </div>
+  </div>
+
+  <script src="data.js" type="module"></script>
+  <script src="script.js" type="module"></script>
+</body>
+</html>
