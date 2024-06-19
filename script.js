@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   setupModal();
-
-  // Setup the about button to show the about modal when clicked
+  showInitialWarning();
   document.querySelector('.about').addEventListener('click', () => {
     openAboutModal();
   });
@@ -44,6 +43,9 @@ function setupModal() {
       closeModal();
     }
   });
+
+  const warningCloseButton = document.getElementById('warningCloseButton');
+  warningCloseButton.addEventListener('click', closeInitialWarning);
 }
 
 function openElementModal(element) {
@@ -52,7 +54,6 @@ function openElementModal(element) {
   document.getElementById('elementLineage').innerText = `血系源流：${element.lineage}`;
   document.getElementById('elementDanger').innerText = `危险程度：${element.danger}`;
 
-  // 设置危险程度颜色
   const dangerColorClass = getDangerColorClass(element.danger);
   document.getElementById('elementDanger').style.color = dangerColorClass;
 
@@ -78,6 +79,18 @@ function openAboutModal() {
   const aboutModal = document.getElementById('aboutModal');
   aboutModal.style.display = 'block';
   aboutModal.style.opacity = '1';
+}
+
+function showInitialWarning() {
+  const initialWarningModal = document.getElementById('initialWarningModal');
+  initialWarningModal.style.display = 'block';
+  initialWarningModal.style.opacity = '1';
+}
+
+function closeInitialWarning() {
+  const initialWarningModal = document.getElementById('initialWarningModal');
+  initialWarningModal.style.opacity = '0';
+  setTimeout(() => initialWarningModal.style.display = 'none', 200);
 }
 
 function getDangerColorClass(dangerLevel) {
