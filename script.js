@@ -109,3 +109,6 @@ function getDangerColorClass(dangerLevel) {
       return 'var(--danger-unknown)';
   }
 }
+
+function doNothing() {
+}
