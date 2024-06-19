@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Interactive periodic table with Fluent Design aesthetics">
-  <title>Interactive Periodic Table</title>
+  <meta name="description" content="卡塞尔学院绝密 - 言灵周期库">
+  <title>言灵周期库iCassell</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header class="navbar">
-        <h1 class="title">言灵周期表</h1>
-        <div class="about">关于 About</div>
-      </header>
-      
-      <div class="container">
-        <div class="periodic-table">
-          <!-- Generate here -->
-        </div>
-      </div>
 
-<!-- Element -->
-<div class="modal" id="elementModal">
+<body>
+  <header class="navbar">
+    <h1 class="title">言灵周期库</h1>
+    <div class="about">关于 About</div>
+  </header>
+
+  <div class="container">
+    <div class="periodic-table">
+      <!-- Generate here -->
+    </div>
+  </div>
+  <p>-------------------------</p>
+  <p>暂无更多内容</p>
+
+  <!-- Element -->
+  <div class="modal" id="elementModal">
     <div class="modal-content">
       <span class="close-button">&times;</span>
       <h1 id="elementName"></h1>
@@ -33,21 +37,55 @@
       <p id="elementUser"></p>
     </div>
   </div>
-  
+
   <!-- About -->
   <div class="modal" id="aboutModal">
     <div class="modal-content">
       <span class="close-button about-close-button">&times;</span>
       <h1>关于这个项目</h1>
       <p>-------------------------</p>
-      <p>Design by Weifeng Wang</p>
+      <p style="color: yellow; font-weight: bold">Design by Weifeng Wang</p>
       <p>-------------------------</p>
-      <p>这是一个交互式元素周期表，设计采用Fluent Design风格。</p>
-      <p>点击任意元素可查看详细信息。</p>
+      <p style="color: yellow; font-weight: bold">v0.2.20240619</p>
+      <p>-------------------------</p>
+      <p>公元2019-2020年，在装备部某次▇▇▇▇的实验中，未知言灵改变了造物主▇▇▇▇的意识</p>
+      <p>该言灵属性为未知，但最终导致目前记录在册的大部分言灵开始消散，宇宙即将蓝移</p>
+      <p>作为▇▇级专员▇▇▇▇▇▇▇▇，已经▇▇▇▇，即将▇▇▇▇▇▇▇▇，此数据库▇▇▇▇▇▇▇▇▇▇▇</p>
+      <p style="color: blue">即将蓝移</p>
+      <p style="color: blue">即将蓝移</p>
+      <p style="color: blue">即将蓝移</p>
+      <p>▇▇▇▇▇▇▇▇</p>
+      <p>上帝是存在的，哈哈哈哈哈哈哈哈哈！</p>
+      <p>-------------------------</p>
+      <p style="color: green; font-weight: bold">诺玛提示您：点击任意元素可查看详细信息。</p>
+    </div>
+  </div>
+
+  <!-- Warning -->
+  <div class="modal" id="initialWarningModal">
+    <div class="modal-content">
+      <h1 style="color: red">警告!</h1>
+      <p style="color: green; font-weight: bold">
+        卡塞尔学院损毁率：100.1% - Ω-58协议启动 - 数据库已解锁
+      </p>
+      <p style="color: rgb(171, 171, 171); font-weight: bold">
+        -------------------------
+      </p>
+      <p style="color: rgb(171, 171, 171); font-weight: bold">
+        以往消息：
+      </p>
+      <p style="color: rgb(171, 171, 171)">
+        数据库已加密。未经卡塞尔冰窖管理层授权的访问将受监控。
+      </p>
+      <p style="color: rgb(171, 171, 171)">
+        数据泄露且导致严重后果将面临IV级通缉与完全记忆抹除。请谨慎操作，并保证自身信息安全。
+      </p>
+      <button id="warningCloseButton">知晓并进入</button>
     </div>
   </div>
 
   <script src="data.js" type="module"></script>
   <script src="script.js" type="module"></script>
 </body>
+
 </html>
